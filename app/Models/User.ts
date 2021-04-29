@@ -11,7 +11,7 @@ export default class User extends BaseModel {
   public id: number
 
   @column()
-  public steamid64: string
+  public steamid: string
 
   @column()
   public ip: string
@@ -23,10 +23,10 @@ export default class User extends BaseModel {
   public password: string
 
   @column.dateTime({ autoCreate: true })
-  public firstLogin: DateTime
+  public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public lastLogin: DateTime
+  public updatedAt: DateTime
 
   @beforeSave()
   public static async hashPassword (User: User) {

@@ -1,22 +1,23 @@
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import Env from '@ioc:Adonis/Core/Env'
 import User from 'App/Models/User'
 
 export default class SlotsController {
-    public async index({response} : HttpContextContract) {
+    public async index() {
         const ranks =  JSON.parse(Env.get('SCPSL_RANK_RS'))
         var players = []
-        
-        for (var rank in ranks) {
-            const users = await User.findBy('rank', rank)
 
+        for (var idr in ranks) {
+
+            const users = await User
+                .query()
+                .where('rank', ranks[idr])
+          
             if (users) {
-                for (var user in users) {
-                    players.push(user.steamid64)
+                for (var idu in users) {
+                    players.push(users[idu].steamid)
                 }
             }
         }
-        
         return players.join("\n")
     }
 }

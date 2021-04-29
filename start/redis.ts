@@ -1,14 +1,14 @@
 /*
 |--------------------------------------------------------------------------
-| Preloaded File
+| Redis routes
 |--------------------------------------------------------------------------
 |
-| Any code written inside this file will be executed during the application
-| boot.
+| Here are all routes based on pub/sub system of redis.
 |
 */
 import Redis from '@ioc:Adonis/Addons/Redis'
 import LoginController from 'App/Controllers/Redis/SCPSL/LoginController'
+import BansController from 'App/Controllers/Redis/SCPSL/BansController'
 
 Redis.subscribe('scpsl:login', async (message: string) => {
     const response = await new LoginController().index(message)
@@ -19,4 +19,8 @@ Redis.subscribe('scpsl:login', async (message: string) => {
 
 // publish scpsl:login "test"
 // publish scpsl:login '{ "dataFrom": "server" }'
-// publish scpsl:login '{ "dataFrom": "server", "steamid64": "123456", "ip": "15.15.15.15" }'
+// publish scpsl:login '{ "dataFrom": "server", "steamid": "123456", "ip": "15.15.15.15" }'
+
+Redis.subscribe('scpsl:ban', async (message: string) => {
+    await new BansController().index(message)
+})
