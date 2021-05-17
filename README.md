@@ -9,25 +9,32 @@
   </a>
 </p>
 
-> AtlasID est un solution complète comprenant une API en NodeJS (AdonisJS) et un plugin, permettant de gérer les joueurs pour les serveurs SCP:SL.
+> AtlasID is a complete solution including an API in NodeJS (AdonisJS) and a plugin (Synapse), allowing to manage players for SCP:SL servers.
 
 ### 🏠 [Homepage](https://atlas-scp.fr)
 
-## Install modules
+## Prerequisites
 
+AtlasID requires a MySQL server and a Redis server to run properly.
+
+## Structure
+ 
+The ``API`` folder contains the source code of the the NodeJS server (AdonisJS).
+<br/>
+The ``Synapse-Plugin`` folder contains the source code of the plugin which allows to interact with the API.
+
+## API: main commands
+
+To install the necessary dependencies:
 ```sh
 yarn install
 ```
-
-## Build
-
+To build the API (for production):
 ```sh
 yarn build
 yarn start
 ```
-
-## Run tests
-
+To launch the API for development:
 ```sh
 yarn dev
 ```
@@ -40,4 +47,4 @@ yarn dev
 * Github: [@antt0n](https://github.com/antt0n)
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator) (modified slightly though)._
