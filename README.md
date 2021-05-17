@@ -1,19 +1,17 @@
 <p align="center">
-  <h1>AtlasID</h1>
+  <img width="400" alt="Logo of AtlasID" src="http://atlas-scp.fr/logo.svg" />
 </p>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-inDEV-blue.svg?cacheSeconds=2592000&style=for-the-badge" />
-  <a href="https://github.com/ServeurHydeos/Wyrd#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge" />
-  </a>
+  <img alt="Documentation" src="https://img.shields.io/badge/synapse%20version-2.6.1-purple.svg?style=for-the-badge" />
   <a href="https://github.com/ServeurHydeos/Wyrd/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-green.svg?style=for-the-badge" />
   </a>
 </p>
 
-> AtlasID est une API écrite avec AdonisJS (NodeJS) pour gérer les utilisateurs d'un serveur SCP:SL.
+> AtlasID est un solution complète comprenant une API en NodeJS (AdonisJS) et un plugin, permettant de gérer les joueurs pour les serveurs SCP:SL.
 
-### 🏠 [Homepage](https://hydeos.fr)
+### 🏠 [Homepage](https://atlas-scp.fr)
 
 ## Install modules
 
