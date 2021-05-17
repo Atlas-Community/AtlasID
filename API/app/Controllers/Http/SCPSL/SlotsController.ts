@@ -18,6 +18,7 @@ export default class SlotsController {
                 }
             }
         }
-        return players.join("\n")
+        players = players.join("\n")
+        return (players) ? players : " "
     }
 }

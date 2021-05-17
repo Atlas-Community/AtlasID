@@ -6,7 +6,7 @@ export default class Banlist extends BaseModel {
   public id: number
 
   @column()
-  public steamid64: string
+  public steamid: string
 
   @column()
   public ip: string

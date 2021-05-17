@@ -1,3 +1,4 @@
+import Redis from '@ioc:Adonis/Addons/Redis'
 import User from 'App/Models/User'
 import Banlist from 'App/Models/Banlist'
 
@@ -17,11 +18,21 @@ export default class LoginController {
 
             const user = await User.updateOrCreate({ steamid: player.steamid }, { ip: player.ip })
 
+            // Cache ban
+            var banReason = await Redis.get("atlasid.ban." + player.steamid);
+            if (!banReason) {
+                const ban = await (await Banlist.findBy('steamid', player.steamid) || await Banlist.findBy('ip', player.ip));
+                if (ban) {
+                    banReason = ban.reason
+                    Redis.set("atlasid.ban." + player.steamid, banReason, "EX", 60)
+                }                
+            }
+            
             return {
-                from: "api",
+                dataFrom: "api",
                 steamid: player.steamid,
-                banned: await (await Banlist.findBy('steamid', player.steamid) || await Banlist.findBy('ip', player.ip)) ? true : false,
-                rank: (user?.rank) ? user.rank : false
+                banned: await banReason ? banReason : null,
+                rank: (user?.rank) ? user.rank : null
              };
 
         } catch(e) {
@@ -38,7 +49,7 @@ export default class LoginController {
 }
 
 {
-    "from": "api",
+    "dataFrom": "api",
     "steamid": "XXX",
     "banned": true / false,
     "rank"?: "XXX"
