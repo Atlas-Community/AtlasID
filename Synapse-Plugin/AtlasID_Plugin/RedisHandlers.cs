@@ -18,7 +18,7 @@ namespace AtlasID_SL
         {
             ISubscriber sub = PluginClass.redis.GetSubscriber();
             sub.Subscribe("scpsl:login").OnMessage(channelMessage => {
-
+                Logger.Get.Send(channelMessage.Message, ConsoleColor.Red);
                 // Deserialization and check dataFrom
                 Login APIResponse = JsonConvert.DeserializeObject<Login>(channelMessage.Message.ToString());
                 if (APIResponse.dataFrom != "api")
