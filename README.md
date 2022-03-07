@@ -5,7 +5,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-inDEV-blue.svg?cacheSeconds=2592000&style=for-the-badge" />
   <img alt="Documentation" src="https://img.shields.io/badge/synapse%20version-2.6.1-purple.svg?style=for-the-badge" />
   <a href="https://github.com/ServeurHydeos/Wyrd/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-green.svg?style=for-the-badge" />
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-no-red.svg?style=for-the-badge" />
   </a>
 </p>
 
