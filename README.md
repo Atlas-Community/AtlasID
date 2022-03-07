@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="400" alt="Logo of AtlasID" src="http://atlas-scp.fr/logo.svg" />
+  <img width="400" alt="Logo of AtlasID" src="https://raw.githubusercontent.com/Atlas-Community/AtlasID/main/logo.svg?token=GHSAT0AAAAAABRNJRETMFAYN3XNRI45IBSQYRGH5JQ" />
 </p>
 <p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-NOT MAINTAINED-red.svg?cacheSeconds=2592000&style=for-the-badge" />
