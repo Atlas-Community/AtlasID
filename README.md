@@ -2,7 +2,7 @@
   <img width="400" alt="Logo of AtlasID" src="http://atlas-scp.fr/logo.svg" />
 </p>
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-inDEV-blue.svg?cacheSeconds=2592000&style=for-the-badge" />
+  <img alt="Version" src="https://img.shields.io/badge/version-NOT MAINTAINED-red.svg?cacheSeconds=2592000&style=for-the-badge" />
   <img alt="Documentation" src="https://img.shields.io/badge/synapse%20version-2.6.1-purple.svg?style=for-the-badge" />
   <a href="https://github.com/ServeurHydeos/Wyrd/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-no-red.svg?style=for-the-badge" />
@@ -12,6 +12,8 @@
 > AtlasID is a complete solution including an API in NodeJS (AdonisJS) and a plugin (Synapse), allowing to manage players for SCP:SL servers.
 
 ### 🏠 [Homepage](https://atlas-scp.fr)
+
+**Important:** since the project for which this resource was developed has been closed, I no longer actively maintain AtlasID. I am open to PR.
 
 ## Prerequisites
 
@@ -43,7 +45,7 @@ yarn dev
 
 👤 **Antt0n / Atlas**
 
-* Website: https://antt0n.tech
+* Website: https://antoine-seguin.fr
 * Github: [@antt0n](https://github.com/antt0n)
 
 ***
